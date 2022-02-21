@@ -1,16 +1,19 @@
 import React from "react";
+import { useState } from "react";
 import Child1 from "./Child1";
+import Child2 from "./Child2";
 
 const Main = () => {
-    const Change = (e) => {
-        var i = e.target.value
-        console.log(i);
+    const [text, setText] = useState()
+    
+    const getValue = (e) => {
+        setText(e.target.value)
     }
-
+    
     return (
         <>
-            <Child1 change={Change}/>
-            {/* <h1>{i}</h1> */}
+            <Child1 change={getValue}/>
+            <Child2 text={text}/>
         </>
     )
 }
