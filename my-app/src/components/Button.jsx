@@ -1,19 +1,19 @@
 import React from "react";
 import { useState } from "react";
 import stylesButton from "../components/Button.module.css"
-const Button = ({className = "someButton", text}) => {
+const Button = ({className, text}) => {
     let createButton
     const [textik, setText] = useState(text)
-    const [classik, setClass] = useState("button " + className)
+    const [classik, setClass] = useState(stylesButton[className])
 
     const ChangeClass = () => {
         const type = prompt("Type a class for button")
-        setText(type)
+        setClass(type)
     }
 
     const ChangeText = () => {
         const type = prompt("Type a text for button")
-        setClass(type)
+        setText(type)
     }
 
     const LogText = () => {
@@ -32,15 +32,15 @@ const Button = ({className = "someButton", text}) => {
     }
 
     if (text === "I Am 1") {
-        createButton = <button className={stylesButton[className]} onClick={ChangeClass}>{textik}</button>
+        createButton = <button className={classik} onClick={ChangeClass}>{textik}</button>
     } else if (text === "I Am 2"){
-        createButton = <button className={stylesButton[className]} onClick={ChangeText}>{textik}</button>
+        createButton = <button className={classik} onClick={ChangeText}>{textik}</button>
     } else if(text === "I Am 3"){
-        createButton = <button className={stylesButton[className]} onClick={LogText}>{textik}</button>
+        createButton = <button className={classik} onClick={LogText}>{textik}</button>
     } else if(text === "I Am 4"){
-        createButton = <button className={stylesButton[className]} onClick={AlertText}>{textik}</button>
-    } else if(text == "I Am 5"){
-        createButton = <button className={stylesButton[className]} onClick={ChangeAll}>{textik}</button>
+        createButton = <button className={classik} onClick={AlertText}>{textik}</button>
+    } else if(text === "I Am 5"){
+        createButton = <button className={classik} onClick={ChangeAll}>{textik}</button>
     }
     
 
