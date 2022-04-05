@@ -1,14 +1,70 @@
-import Button from "./components/Button";
+import img from "./img/XIX.jpg";
+
 const App = () => {
   return (
     <>
-      <Button className="button1" text={"I Am 1"}/>
-      <Button className="button2" text={"I Am 2"}/>
-      <Button className="button3" text={"I Am 3"}/>
-      <Button className="button4" text={"I Am 4"}/>
-      <Button className="button5" text={"I Am 5"}/>
+      <h1>Історія Львова</h1>
+      <img src={img}></img>
+      <div style={{display: "flex",flexDirection: "row", alignItems: "center",}}>
+        <p>
+          <h2 style={{paddingRight: "3px",}}>Львів - </h2> найбільше місто Західної України, що
+          протягом багатовікової історії було, і є нині, науковим, культурним та
+          національним центром регіону.
+        </p>
+      </div>
+
+      <div style={{display: "flex",flexDirection: "row",alignItems: "center"}}>
+        <p style={{fontWeight: "bold",fontStyle: "italic"}}>В найдавніші часи -</p>
+        <p style={{fontSize: "larger"}}>
+          столиця Галицько-Волинської держави, згодом - адміністративний центр
+          Руського воєводства, автономного королівства Галіції і Лодомерії.
+        </p>
+      </div>
+      <p style={{fontSize: "large", padding: "0"}}>
+        У <s>1920</s> 1918 році - столиця ЗУНР. Після захоплення міста Польщею
+        Львів став центром однойменного воєводства.
+      </p>
+      <p style={{fontSize: "larger"}}>
+        У другій світовій війні був окупований спочатку радянською, а потім
+        німецькою армією. У повоєнний період увійшов до Радянського союзу.{" "}
+        <ins>
+          З 1991 року - адміністративний центр Львівської області незалежної
+          України
+        </ins>
+      </p>
+      <hr></hr>
+      <ol>
+        <li style={{fontSize: "larger"}}>
+          <b>Заснування</b>
+        </li>
+        <li style={{fontSize: "larger"}}>
+          <b>1253-1349</b>:Руське королівство(Галицько-Волинська держава):
+          протистояння з Золотою Ордою
+        </li>
+        <li style={{fontSize: "larger"}}>
+          <b>1349-1387</b>:Руське Королівство: протистояння з Польщею та
+          Угорщиною
+        </li>
+        <li style={{fontSize: "larger"}}>
+          <b>1387-1772</b>:під владою Польского королівства і Речі Посполитої
+        </li>
+        <li style={{fontSize: "larger"}}>
+          <b>1772-1914</b>:у складі Австрійської(згодом Австро-Угорської
+          Імперії)
+        </li>
+        <li style={{fontSize: "larger"}}>
+          <b>1914-1919</b>:у період Першої світової війни та Української
+          літератури
+        </li>
+        <li style={{fontSize: "larger"}}>
+          <b>1919-1939</b>:у складі другої Речі Посполитої
+        </li>
+        <li style={{fontSize: "larger"}}>
+          <b>1939-1944</b>: у період Другої світової війни
+        </li>
+      </ol>
     </>
-  )
-}
+  );
+};
 
 export default App;
